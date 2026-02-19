@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Bucad Games Corporation</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    background: #0a0a0f;
+    color: white;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 10%;
+    position: fixed;
+    width: 100%;
+    background: rgba(0,0,0,0.6);
+    backdrop-filter: blur(10px);
+}
+
+.logo {
+    font-family: 'Orbitron', sans-serif;
+    font-size: 22px;
+    font-weight: 700;
+    color: #00f0ff;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    margin-left: 25px;
+    font-size: 14px;
+    transition: 0.3s;
+}
+
+nav a:hover {
+    color: #00f0ff;
+}
+
+.hero {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 20px;
+    background: radial-gradient(circle at center, #111827, #000000);
+}
+
+.hero h1 {
+    font-family: 'Orbitron', sans-serif;
+    font-size: 48px;
+    margin-bottom: 20px;
+}
+
+.hero span {
+    color: #00f0ff;
+}
+
+.hero p {
+    max-width: 600px;
+    margin: auto;
+    opacity: 0.8;
+}
+
+.hero button {
+    margin-top: 30px;
+    padding: 12px 30px;
+    border: none;
+    background: #00f0ff;
+    color: black;
+    font-weight: 600;
+    cursor: pointer;
+    border-radius: 30px;
+    transition: 0.3s;
+}
+
+.hero button:hover {
+    transform: scale(1.05);
+}
+
+.section {
+    padding: 100px 10%;
+    text-align: center;
+}
+
+.games {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+    margin-top: 40px;
+}
+
+.card {
+    background: #111827;
+    padding: 30px;
+    border-radius: 15px;
+    transition: 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+}
+
+footer {
+    text-align: center;
+    padding: 30px;
+    background: #000;
+    font-size: 14px;
+    opacity: 0.7;
+}
+
+@media(max-width:768px){
+    .hero h1 {
+        font-size: 32px;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<header>
+    <div class="logo">BUCAD GAMES</div>
+    <nav>
+        <a href="#">Home</a>
+        <a href="#games">Games</a>
+        <a href="#about">About</a>
+        <a href="#contact">Contact</a>
+    </nav>
+</header>
+
+<section class="hero">
+    <div>
+        <h1>Creating The Future Of <span>Gaming</span></h1>
+        <p>Bucad Games Corporation is dedicated to building immersive, innovative, and unforgettable gaming experiences for players worldwide.</p>
+        <button onclick="scrollToGames()">Explore Our Games</button>
+    </div>
+</section>
+
+<section class="section" id="games">
+    <h2>Our Games</h2>
+    <div class="games">
+        <div class="card">
+            <h3>Project Nova</h3>
+            <p>A futuristic open-world sci-fi adventure.</p>
+        </div>
+        <div class="card">
+            <h3>Shadow Arena</h3>
+            <p>Competitive multiplayer battle experience.</p>
+        </div>
+        <div class="card">
+            <h3>Kingdom Fall</h3>
+            <p>Strategy and conquest in a dynamic fantasy world.</p>
+        </div>
+    </div>
+</section>
+
+<section class="section" id="about">
+    <h2>About Us</h2>
+    <p>Bucad Games Corporation is a next-generation game development studio focused on creativity, innovation, and pushing boundaries in interactive entertainment.</p>
+</section>
+
+<section class="section" id="contact">
+    <h2>Contact</h2>
+    <p>Email: contact@bucadgames.com</p>
+</section>
+
+<footer>
+    © 2026 Bucad Games Corporation. All Rights Reserved.
+</footer>
+
+<script>
+function scrollToGames(){
+    document.getElementById("games").scrollIntoView({behavior: "smooth"});
+}
+</script>
+
+</body>
+</html>
